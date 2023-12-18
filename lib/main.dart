@@ -10,7 +10,7 @@ class bmiApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'BMI Calculator',
-        theme: ThemeData(primaryColor: Colors.blue),
+        theme: ThemeData(primaryColor: Colors.purple),
         home: SplashScreen());
   }
 }
@@ -25,7 +25,7 @@ class homepageState extends State<homePage> {
   var ftController = TextEditingController();
   var inchController = TextEditingController();
   var result = "";
-  var bgColor = Colors.blueGrey[100];
+  // var bgColor = Colors.blueGrey[100];
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +33,18 @@ class homepageState extends State<homePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('BMI Calculator'),
+        backgroundColor: Colors.purple,
       ),
       body: Container(
-        color: bgColor,
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+          colors: [
+            Color(0xffcd9cf2),
+            Color(0xfff6f3ff),
+          ],
+          begin: FractionalOffset(0.0, 0.1),
+          end: FractionalOffset(1.0, 1.1),
+        )),
         child: Center(
           child: Container(
             width: 300,
@@ -117,13 +126,13 @@ class homepageState extends State<homePage> {
 
                         if (bmi > 25) {
                           msg = "You are overweight!!!";
-                          bgColor = Colors.orange.shade400;
+                          // bgColor = Colors.orange.shade400;
                         } else if (bmi < 18) {
                           msg = "You are underweight!!!";
-                          bgColor = Colors.red.shade400;
+                          // bgColor = Colors.red.shade400;
                         } else {
                           msg = "You are healthy!!!";
-                          bgColor = Colors.green.shade400;
+                          // bgColor = Colors.green.shade400;
                         }
 
                         setState(() {
