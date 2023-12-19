@@ -32,7 +32,7 @@ class homepageState extends State<homePage> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI Calculator'),
+        title: Center(child: Text('BMI Calculator')),
         backgroundColor: Colors.purple,
       ),
       body: Container(
