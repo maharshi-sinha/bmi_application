@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:bmi_app/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -29,6 +30,10 @@ class SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Container(
+                height: 150,
+                width: 150,
+                child: Lottie.asset("assets/images/SplashAnimation.json")),
             Text(
               "BMI Calculator",
               style: TextStyle(
@@ -47,11 +52,6 @@ class SplashScreenState extends State<SplashScreen> {
               child: Text(" ~By Maharshi",
                   style: TextStyle(
                       fontSize: 24, color: Colors.white, fontFamily: "roboto")),
-            ),
-            SizedBox(height: 21),
-            CircleAvatar(
-              radius: 100,
-              backgroundImage: AssetImage("assets/images/bmi_splash.png"),
             ),
           ],
         ),
